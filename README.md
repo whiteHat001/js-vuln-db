@@ -21,7 +21,7 @@ CVE Number | Feature | Keywords | Credit
 [CVE-2016-1677](./v8/CVE-2016-1677.md) | decodeURI | Side Effect, Information Leak | _Guang Gong [[1]](#qihoo360)_
 [CVE-2016-1688](./v8/CVE-2016-1688.md) | RegExp | | _Max Korenko_
 [CVE-2016-5129](./v8/CVE-2016-5129.md) | Array | Side Effect | _Jeonghoon Shin_
-[CVE-2016-5172](./v8/CVE-2016-5172.md) | | Scope | _Choongwoo Han [[6]](#kaistsoftsec)_
+[CVE-2016-5172](./v8/CVE-2016-5172.md) | Parser | Scope, eval | _Choongwoo Han [[6]](#kaistsoftsec)_
 [CVE-2016-5198](./v8/CVE-2016-5198.md) | Optimization | parseInt, Compiler, OOB | _Tencent Keen Security Lab_
 [CVE-2016-5200](./v8/CVE-2016-5200.md) | Optimization | asm.js TypedArray, OOB | _Choongwoo Han [[6]](#kaistsoftsec)_
 [CVE-2016-9651](./v8/CVE-2016-9651.md) | Object.assign | Logic, Property | _Guang Gong [[1]](#qihoo360)_
@@ -30,6 +30,13 @@ CVE Number | Feature | Keywords | Credit
 [CVE-2017-5053](./v8/CVE-2017-5053.md) | Array.indexOf | Side Effect | _Team Sniper [[2]](#keenlab)_
 [CVE-2017-5070](./v8/CVE-2017-5070.md) | Optimization | Array, Type Confusion | _Zhao Qixun [[5]](#qihoo360vulcan)_
 [CVE-2017-5071](./v8/CVE-2017-5071.md) | Compiler | OOB | _Choongwoo Han_
+[CVE-2017-5088](./v8/CVE-2017-5088.md) | wasm | Information Leak | _Xiling Gong [[7]](#tencentplatform)_
+[CVE-2017-5098](./v8/CVE-2017-5098.md) | Parser | Use After Free | _Jihoon Kim [[6]](#kaistsoftsec)_
+[CVE-2017-5115](./v8/CVE-2017-5115.md) | Compiler | OOB | Marco Giovannini
+[CVE-2017-5116](./v8/CVE-2017-5116.md) | wasm | Race Condition | _Guang Gong [[1]](#qihoo360)_
+[CVE-2017-5121](./v8/CVE-2017-5121.md) | Compiler | Uninitialized Memory | _Jordan Rabet [[9]](#microsoft)_
+[CVE-2017-5122](./v8/CVE-2017-5122.md) | wasm | Side Effect, OOB | _Choongwoo Han [[8]](#naver)_
+[CVE-2017-15401](./v8/CVE-2017-15401.md) | wasm | Side Effect, OOB | ?
 
 ## ChakraCore
 CVE Number | Feature | Keywords | Credit
@@ -62,6 +69,21 @@ CVE Number | Feature | Keywords | Credit
 [CVE-2017-8657](./chakra/CVE-2017-8657.md) | Compiler | asm.js | _lokihardt [[3]](#projectzero)_
 [CVE-2017-8670](./chakra/CVE-2017-8670.md) | arguments | Compiler, Uninitialize Memory | _lokihardt [[3]](#projectzero)_
 [CVE-2017-8671](./chakra/CVE-2017-8671.md) | Function.call | Integer Overflow | _lokihardt [[3]](#projectzero)_
+[CVE-2017-8729](./chakra/CVE-2017-8729.md) | Parser | Object | _lokihardt [[3]](#projectzero)_
+[CVE-2017-8740](./chakra/CVE-2017-8740.md) | Parser | Scope | _lokihardt [[3]](#projectzero)_
+[CVE-2017-8751](./chakra/CVE-2017-8751.md) | Object.setPrototypeOf | Memory corruption | _lokihardt [[3]](#projectzero)_
+[CVE-2017-8755](./chakra/CVE-2017-8755.md) | Parser | asm.js | _lokihardt [[3]](#projectzero)_
+[CVE-2017-11764](./chakra/CVE-2017-11764.md) | Parser | eval | _lokihardt [[3]](#projectzero)_
+[CVE-2017-11799](./chakra/CVE-2017-11799.md) | Compiler | JIT | _lokihardt [[3]](#projectzero)_
+[CVE-2017-11802](./chakra/CVE-2017-11802.md) | Compiler | String.replace, Type Confusion | _lokihardt [[3]](#projectzero)_
+[CVE-2017-11809](./chakra/CVE-2017-11809.md) | Compiler | Recursive function, Uninitialized Memory | _lokihardt [[3]](#projectzero)_
+[CVE-2017-11811](./chakra/CVE-2017-11811.md) | Compiler | Type confusion | _lokihardt [[3]](#projectzero)_
+[CVE-2017-11839](./chakra/CVE-2017-11839.md) | Compiler | JIT | _lokihardt [[3]](#projectzero)_
+[CVE-2017-11840](./chakra/CVE-2017-11840.md) | Compiler | JIT | _lokihardt [[3]](#projectzero)_
+[CVE-2017-11841](./chakra/CVE-2017-11841.md) | Compiler | JIT | _lokihardt [[3]](#projectzero)_
+[CVE-2017-11861](./chakra/CVE-2017-11861.md) | Compiler | Integer Overflow | _lokihardt [[3]](#projectzero)_
+[CVE-2017-11870](./chakra/CVE-2017-11870.md) | Compiler | JIT | _lokihardt [[3]](#projectzero)_
+[CVE-2017-11873](./chakra/CVE-2017-11873.md) | Compiler | JIT | _lokihardt [[3]](#projectzero)_
 
 ## JavaScriptCore
 CVE Number | Feature | Keywords | Credit
@@ -80,12 +102,25 @@ CVE Number | Feature | Keywords | Credit
 [CVE-2017-6980](./jsc/CVE-2017-6980.md) | Array.splice | Uninitialized Memory | _lokihardt [[3]](#projectzero)_
 [CVE-2017-6984](./jsc/CVE-2017-6984.md) | Intl.getCanonicalLocales | Heap Overflow | _lokihardt [[3]](#projectzero)_
 [CVE-2017-7056](./jsc/CVE-2017-7056.md) | arguments | Uninitialized Memory | _lokihardt [[3]](#projectzero)_
-[CVE-2017-7061](./jsc/CVE-2017-7061.md) | Compiler | Array, Type Confusion | _lokihardt [[3]](#projectzero)_
+[CVE-2017-7061](./jsc/CVE-2017-7061.md) | Compiler | for-in, Type Confusion | _lokihardt [[3]](#projectzero)_
+[CVE-2017-7092](./jsc/CVE-2017-7092.md) | String.link | Heap Overflow | _Samuel Gro and Niklas Baumstark_<br>_Qixun Zhao [[5]](#qihoo360vulcan)_
+[CVE-2017-7117](./jsc/CVE-2017-7117.md) | Compiler | for-in, Type Confusion | _lokihardt [[3]](#projectzero)_
 
 ## SpiderMonkey
 CVE Number | Feature | Keywords | Credit
 ---------- | ------- | -------- | ------
 [CVE-2014-1513](./spidermonkey/CVE-2014-1513.md) | TypedArray.subarray | OOB, Buffer Neutering, Side Effect | _Jüri Aedla_
+
+## JScript
+
+CVE Number | Feature | Keywords | Credit
+---------- | ------- | -------- | ------
+[CVE-2017-11793](./jscript/CVE-2017-11793.md) | JSON | Use After Free | _ifratric [[3]](#projectzero)_
+[CVE-2017-11855](./jscript/CVE-2017-11855.md) | Array.slice | Uninitialized Variable | _ifratric [[3]](#projectzero)_
+[CVE-2017-11890](./jscript/CVE-2017-11890.md) | RegExp | Heap overflow | _ifratric [[3]](#projectzero)_
+[CVE-2017-11903](./jscript/CVE-2017-11903.md) | Array.join | Use After Free | _ifratric [[3]](#projectzero)_
+[CVE-2017-11906](./jscript/CVE-2017-11906.md) | RegExp | OOB | _ifratric [[3]](#projectzero)_
+[CVE-2017-11907](./jscript/CVE-2017-11907.md) | Array.sort | Heap overflow | _ifratric [[3]](#projectzero)_
 
 ---
 <a name="qihoo360"></a>[1] Qihoo 360  
@@ -94,3 +129,6 @@ CVE Number | Feature | Keywords | Credit
 <a name="qihoo360skyeye"></a>[4] Qihoo 360 Skyeye Labs  
 <a name="qihoo360vulcan"></a>[5] Qihoo 360 Vulcan Team  
 <a name="kaistsoftsec"></a>[6] KAIST SoftSec  
+<a name="tencentplatform"></a>[7] Tencent Security Platform Department
+<a name="naver"></a>[8] Naver Corporation
+<a name="microsoft"></a>[9] Microsoft
